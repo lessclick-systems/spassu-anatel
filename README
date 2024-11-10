@@ -1,0 +1,37 @@
+### Preparação do Ambiente
+
+# Execução:
+
+
+## Criar repositório
+- Criar um repositório no giblab chamado spassu-anatel
+
+## Crie uma chave para acesso ao gitlab
+```shell
+ssh-keygen -t rsa -b 4096 -C "jacques@desos.com.br"
+```
+
+## Adicione a chave
+```shell
+ssh-add /root/.ssh/id_rsa_gitlab
+```
+
+## Adição de certificado público ao gitlab
+```shell
+cat ~/.ssh/id_rsa_gitlab.pub
+```
+
+## Clonar repositório
+```shell
+git clone git@gitlab.com:jacquesnunes/spassu-anatel.git
+```
+
+## Adicione o projeto a diretórios seguros do git
+```shell
+git config --global --add safe.directory /home/jacquesxnunes/projetos/spassu-anatel
+```
+
+## Inicialização do git flow init
+```shell
+git flow init
+```
